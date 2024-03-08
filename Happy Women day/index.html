@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Feliz Día de la Mujer</title>
+</head>
+<body>
+    <h1>Feliz Día!!!</h1>
+    <form id="messageForm">
+        <label for="nameInput">¿Cual es tú nombre?</label><br>
+        <input type="text" id="nameInput" name="nameInput"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="output" style="display: none;">
+        <p id="displayMessage"></p>
+        <img src="../../../../Desktop/flowers.jpeg" alt="Flower">
+    </div>
+
+    <script>
+        document.getElementById("messageForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var message = document.getElementById("nameInput").value;
+            var finalMessage = "Feliz día de la mujer " + message;
+            document.getElementById("displayMessage").innerText = finalMessage;
+            document.getElementById("output").style.display = "block";
+        });
+    </script>
+</body>
+</html>
